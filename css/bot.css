@@ -1,0 +1,388 @@
+/* Basic */
+@-ms-viewport {
+width: device-width;
+}
+		
+@media screen and (max-width: 480px) {
+		
+html, body {
+	min-width: 320px;
+	}
+		
+}
+		
+			html {
+				box-sizing: border-box;
+			}
+		
+			*, *:before, *:after {
+				box-sizing: inherit;
+			}
+		
+			body {
+				background: #228dd4;
+			}
+		
+				body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+					-moz-animation: none !important;
+					-webkit-animation: none !important;
+					-ms-animation: none !important;
+					animation: none !important;
+					-moz-transition: none !important;
+					-webkit-transition: none !important;
+					-ms-transition: none !important;
+					transition: none !important;
+				}
+		
+		/* Type */
+		
+			html {
+				font-size: 16pt;
+			}
+		
+				@media screen and (max-width: 1680px) {
+		
+					html {
+						font-size: 12pt;
+					}
+		
+				}
+		
+				@media screen and (max-width: 736px) {
+		
+					html {
+						font-size: 11pt;
+					}
+		
+				}
+		
+				@media screen and (max-width: 360px) {
+		
+					html {
+						font-size: 10pt;
+					}
+		
+				}
+		
+			body, input, select, textarea {
+				color: #ffffff;
+				font-family: "Source Sans Pro", sans-serif;
+				font-weight: 300;
+				font-size: 1rem;
+				line-height: 1.65;
+			}
+		
+			a {
+				-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+				-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+				-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+				transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+				text-decoration: none;
+				color: inherit;
+			}
+		
+				a:hover {
+					border-bottom-color: transparent;
+				}
+		
+			strong, b {
+				color: #ffffff;
+				font-weight: 600;
+			}
+		
+			em, i {
+				font-style: italic;
+			}
+		
+			p {
+				margin: 0 0 2rem 0;
+			}
+		
+			h1, h2, h3, h4, h5, h6 {
+				color: #ffffff;
+				font-weight: 600;
+				line-height: 1.5;
+				margin: 0 0 1rem 0;
+				text-transform: uppercase;
+				letter-spacing: 0.2rem;
+			}
+		
+				h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+					color: inherit;
+					text-decoration: none;
+				}
+		
+				h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
+					border-bottom: solid 1px #ffffff;
+					width: -moz-max-content;
+					width: -webkit-max-content;
+					width: -ms-max-content;
+					width: max-content;
+					padding-bottom: 0.5rem;
+					margin: 0 0 2rem 0;
+				}
+		
+			h1 {
+				font-size: 2.25rem;
+				line-height: 1.3;
+				letter-spacing: 0.5rem;
+			}
+		
+			h2 {
+				font-size: 1.5rem;
+				line-height: 1.4;
+				letter-spacing: 0.5rem;
+			}
+		
+			h3 {
+				font-size: 1rem;
+			}
+		
+			h4 {
+				font-size: 0.8rem;
+			}
+		
+			h5 {
+				font-size: 0.7rem;
+			}
+		
+			h6 {
+				font-size: 0.6rem;
+			}
+		
+			@media screen and (max-width: 736px) {
+		
+				h1 {
+					font-size: 1.75rem;
+					line-height: 1.4;
+				}
+		
+				h2 {
+					font-size: 1.25em;
+					line-height: 1.5;
+				}
+		
+			}
+		
+			sub {
+				font-size: 0.8rem;
+				position: relative;
+				top: 0.5rem;
+			}
+		
+			sup {
+				font-size: 0.8rem;
+				position: relative;
+				top: -0.5rem;
+			}
+		
+			blockquote {
+				border-left: solid 4px #ffffff;
+				font-style: italic;
+				margin: 0 0 2rem 0;
+				padding: 0.5rem 0 0.5rem 2rem;
+			}
+		
+			code {
+				background: rgba(255, 255, 255, 0.075);
+				border-radius: 4px;
+				font-family: "Courier New", monospace;
+				font-size: 0.9rem;
+				margin: 0 0.25rem;
+				padding: 0.25rem 0.65rem;
+			}
+		
+			pre {
+				-webkit-overflow-scrolling: touch;
+				font-family: "Courier New", monospace;
+				font-size: 0.9rem;
+				margin: 0 0 2rem 0;
+			}
+		
+				pre code {
+					display: block;
+					line-height: 1.75;
+					padding: 1rem 1.5rem;
+					overflow-x: auto;
+				}
+		
+			hr {
+				border: 0;
+				border-bottom: solid 1px #ffffff;
+				margin: 2.75rem 0;
+			}
+		
+			.align-left {
+				text-align: left;
+			}
+		
+			.align-center {
+				text-align: center;
+			}
+		
+			.align-right {
+				text-align: right;
+			}
+		
+
+
+			
+			/* Table */
+			
+				.table-wrapper {
+					-webkit-overflow-scrolling: touch;
+					overflow-x: auto;
+				}
+			
+				table {
+					margin: 0 0 2rem 0;
+					width: 100%;
+				}
+			
+					table tbody tr {
+						border: solid 1px #ffffff;
+						border-left: 0;
+						border-right: 0;
+					}
+			
+						table tbody tr:nth-child(2n + 1) {
+							background-color: rgba(255, 255, 255, 0.075);
+						}
+			
+					table td {
+						padding: 0.75em 0.75em;
+					}
+			
+					table th {
+						color: #ffffff;
+						font-size: 0.9em;
+						font-weight: 600;
+						padding: 0 0.75em 0.75em 0.75em;
+						text-align: left;
+					}
+			
+					table thead {
+						border-bottom: solid 2px #ffffff;
+					}
+			
+					table tfoot {
+						border-top: solid 2px #ffffff;
+					}
+			
+					table.alt {
+						border-collapse: separate;
+					}
+			
+						table.alt tbody tr td {
+							border: solid 1px #ffffff;
+							border-left-width: 0;
+							border-top-width: 0;
+						}
+			
+							table.alt tbody tr td:first-child {
+								border-left-width: 1px;
+							}
+			
+						table.alt tbody tr:first-child td {
+							border-top-width: 1px;
+						}
+			
+						table.alt thead {
+							border-bottom: 0;
+						}
+			
+						table.alt tfoot {
+							border-top: 0;
+						}
+			
+
+			
+					@media screen and (max-width: 736px) {
+			
+						#header > * {
+							margin-top: 2rem;
+						}
+			
+							#header > *:before {
+								top: calc(-2rem - 1px);
+								height: calc(2rem + 1px);
+							}
+			
+						#header .logo {
+							width: 4.75rem;
+							height: 4.75rem;
+							line-height: 4.75rem;
+						}
+			
+							#header .logo .icon:before {
+								font-size: 1.75rem;
+							}
+			
+						#header .content .inner {
+							padding: 2.5rem 1rem;
+						}
+			
+						#header .content p {
+							line-height: 1.875;
+						}
+			
+					}
+			
+					@media screen and (max-width: 480px) {
+			
+						#header {
+							padding: 1.5rem 0;
+						}
+			
+							#header .content .inner {
+								padding: 2.5rem 0;
+							}
+							/* The side navigation menu */
+.sidenav {
+	height: 100%; /* 100% Full-height */
+	width: 0; /* 0 width - change this with JavaScript */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Stay on top */
+	top: 0;
+	left: 0;
+	background-color: #111; /* Black*/
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 60px; /* Place content 60px from the top */
+	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+	color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+	transition: margin-left .5s;
+	padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+  }

@@ -1,0 +1,1383 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/bot.css">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+
+  <title>RAVANA BOT</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+  
+<style>
+html, body {
+  height: 100%;
+}
+
+body {
+    background: url(https://telegra.ph/file/824362e18b3e9d51ad815.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.firefly {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 0.4vw;
+  height: 0.4vw;
+  margin: -0.2vw 0 0 9.8vw;
+  animation: ease 200s alternate infinite;
+  pointer-events: none;
+}
+.firefly::before, .firefly::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform-origin: -10vw;
+}
+.firefly::before {
+  background: black;
+  opacity: 0.4;
+  animation: drift ease alternate infinite;
+}
+.firefly::after {
+  background: white;
+  opacity: 0;
+  box-shadow: 0 0 0vw 0vw yellow;
+  animation: drift ease alternate infinite, flash ease infinite;
+}
+
+.firefly:nth-child(1) {
+  animation-name: move1;
+}
+.firefly:nth-child(1)::before {
+  animation-duration: 14s;
+}
+.firefly:nth-child(1)::after {
+  animation-duration: 14s, 9678ms;
+  animation-delay: 0ms, 5489ms;
+}
+
+@keyframes move1 {
+  0% {
+    transform: translateX(-38vw) translateY(32vh) scale(0.58);
+  }
+  5.5555555556% {
+    transform: translateX(-4vw) translateY(-19vh) scale(0.56);
+  }
+  11.1111111111% {
+    transform: translateX(-31vw) translateY(12vh) scale(0.76);
+  }
+  16.6666666667% {
+    transform: translateX(-39vw) translateY(-17vh) scale(0.49);
+  }
+  22.2222222222% {
+    transform: translateX(5vw) translateY(-15vh) scale(0.89);
+  }
+  27.7777777778% {
+    transform: translateX(39vw) translateY(-15vh) scale(0.8);
+  }
+  33.3333333333% {
+    transform: translateX(21vw) translateY(29vh) scale(0.58);
+  }
+  38.8888888889% {
+    transform: translateX(14vw) translateY(-39vh) scale(0.47);
+  }
+  44.4444444444% {
+    transform: translateX(-18vw) translateY(-9vh) scale(0.81);
+  }
+  50% {
+    transform: translateX(22vw) translateY(8vh) scale(0.49);
+  }
+  55.5555555556% {
+    transform: translateX(-38vw) translateY(-13vh) scale(0.62);
+  }
+  61.1111111111% {
+    transform: translateX(-11vw) translateY(-23vh) scale(0.5);
+  }
+  66.6666666667% {
+    transform: translateX(15vw) translateY(24vh) scale(0.3);
+  }
+  72.2222222222% {
+    transform: translateX(30vw) translateY(-22vh) scale(0.42);
+  }
+  77.7777777778% {
+    transform: translateX(-5vw) translateY(21vh) scale(0.96);
+  }
+  83.3333333333% {
+    transform: translateX(36vw) translateY(37vh) scale(0.72);
+  }
+  88.8888888889% {
+    transform: translateX(48vw) translateY(1vh) scale(0.46);
+  }
+  94.4444444444% {
+    transform: translateX(30vw) translateY(-17vh) scale(0.88);
+  }
+  100% {
+    transform: translateX(25vw) translateY(15vh) scale(0.93);
+  }
+}
+.firefly:nth-child(2) {
+  animation-name: move2;
+}
+.firefly:nth-child(2)::before {
+  animation-duration: 12s;
+}
+.firefly:nth-child(2)::after {
+  animation-duration: 12s, 8721ms;
+  animation-delay: 0ms, 5477ms;
+}
+
+@keyframes move2 {
+  0% {
+    transform: translateX(-49vw) translateY(5vh) scale(0.67);
+  }
+  4% {
+    transform: translateX(34vw) translateY(-44vh) scale(0.57);
+  }
+  8% {
+    transform: translateX(-13vw) translateY(-6vh) scale(0.99);
+  }
+  12% {
+    transform: translateX(23vw) translateY(-31vh) scale(0.9);
+  }
+  16% {
+    transform: translateX(31vw) translateY(-6vh) scale(0.3);
+  }
+  20% {
+    transform: translateX(-6vw) translateY(-32vh) scale(0.85);
+  }
+  24% {
+    transform: translateX(3vw) translateY(44vh) scale(0.41);
+  }
+  28% {
+    transform: translateX(44vw) translateY(50vh) scale(0.59);
+  }
+  32% {
+    transform: translateX(7vw) translateY(12vh) scale(0.72);
+  }
+  36% {
+    transform: translateX(-15vw) translateY(-26vh) scale(0.78);
+  }
+  40% {
+    transform: translateX(3vw) translateY(-22vh) scale(0.51);
+  }
+  44% {
+    transform: translateX(-12vw) translateY(-35vh) scale(0.49);
+  }
+  48% {
+    transform: translateX(-38vw) translateY(-31vh) scale(0.95);
+  }
+  52% {
+    transform: translateX(-38vw) translateY(38vh) scale(0.36);
+  }
+  56% {
+    transform: translateX(0vw) translateY(25vh) scale(0.46);
+  }
+  60% {
+    transform: translateX(-10vw) translateY(36vh) scale(1);
+  }
+  64% {
+    transform: translateX(-20vw) translateY(44vh) scale(0.93);
+  }
+  68% {
+    transform: translateX(10vw) translateY(12vh) scale(0.42);
+  }
+  72% {
+    transform: translateX(38vw) translateY(-17vh) scale(0.82);
+  }
+  76% {
+    transform: translateX(39vw) translateY(41vh) scale(0.48);
+  }
+  80% {
+    transform: translateX(34vw) translateY(34vh) scale(0.32);
+  }
+  84% {
+    transform: translateX(39vw) translateY(-27vh) scale(0.74);
+  }
+  88% {
+    transform: translateX(4vw) translateY(-5vh) scale(0.56);
+  }
+  92% {
+    transform: translateX(15vw) translateY(12vh) scale(0.86);
+  }
+  96% {
+    transform: translateX(-27vw) translateY(-34vh) scale(0.64);
+  }
+  100% {
+    transform: translateX(-38vw) translateY(7vh) scale(0.4);
+  }
+}
+.firefly:nth-child(3) {
+  animation-name: move3;
+}
+.firefly:nth-child(3)::before {
+  animation-duration: 16s;
+}
+.firefly:nth-child(3)::after {
+  animation-duration: 16s, 8757ms;
+  animation-delay: 0ms, 735ms;
+}
+
+@keyframes move3 {
+  0% {
+    transform: translateX(-47vw) translateY(-36vh) scale(0.43);
+  }
+  3.8461538462% {
+    transform: translateX(-42vw) translateY(-13vh) scale(0.3);
+  }
+  7.6923076923% {
+    transform: translateX(-24vw) translateY(36vh) scale(0.43);
+  }
+  11.5384615385% {
+    transform: translateX(-4vw) translateY(-19vh) scale(0.59);
+  }
+  15.3846153846% {
+    transform: translateX(7vw) translateY(48vh) scale(0.77);
+  }
+  19.2307692308% {
+    transform: translateX(-41vw) translateY(-26vh) scale(0.27);
+  }
+  23.0769230769% {
+    transform: translateX(-47vw) translateY(26vh) scale(0.89);
+  }
+  26.9230769231% {
+    transform: translateX(27vw) translateY(19vh) scale(0.87);
+  }
+  30.7692307692% {
+    transform: translateX(15vw) translateY(23vh) scale(0.68);
+  }
+  34.6153846154% {
+    transform: translateX(-31vw) translateY(44vh) scale(0.61);
+  }
+  38.4615384615% {
+    transform: translateX(47vw) translateY(-31vh) scale(0.78);
+  }
+  42.3076923077% {
+    transform: translateX(6vw) translateY(-36vh) scale(0.62);
+  }
+  46.1538461538% {
+    transform: translateX(9vw) translateY(-1vh) scale(0.46);
+  }
+  50% {
+    transform: translateX(3vw) translateY(-27vh) scale(0.44);
+  }
+  53.8461538462% {
+    transform: translateX(-27vw) translateY(-19vh) scale(0.86);
+  }
+  57.6923076923% {
+    transform: translateX(-43vw) translateY(-24vh) scale(0.83);
+  }
+  61.5384615385% {
+    transform: translateX(30vw) translateY(-29vh) scale(0.36);
+  }
+  65.3846153846% {
+    transform: translateX(15vw) translateY(45vh) scale(0.8);
+  }
+  69.2307692308% {
+    transform: translateX(-20vw) translateY(34vh) scale(0.86);
+  }
+  73.0769230769% {
+    transform: translateX(-38vw) translateY(-19vh) scale(0.32);
+  }
+  76.9230769231% {
+    transform: translateX(-28vw) translateY(39vh) scale(0.99);
+  }
+  80.7692307692% {
+    transform: translateX(12vw) translateY(41vh) scale(0.54);
+  }
+  84.6153846154% {
+    transform: translateX(11vw) translateY(27vh) scale(0.88);
+  }
+  88.4615384615% {
+    transform: translateX(26vw) translateY(27vh) scale(0.6);
+  }
+  92.3076923077% {
+    transform: translateX(3vw) translateY(0vh) scale(0.66);
+  }
+  96.1538461538% {
+    transform: translateX(42vw) translateY(-14vh) scale(0.46);
+  }
+  100% {
+    transform: translateX(16vw) translateY(40vh) scale(0.53);
+  }
+}
+.firefly:nth-child(4) {
+  animation-name: move4;
+}
+.firefly:nth-child(4)::before {
+  animation-duration: 13s;
+}
+.firefly:nth-child(4)::after {
+  animation-duration: 13s, 10496ms;
+  animation-delay: 0ms, 5657ms;
+}
+
+@keyframes move4 {
+  0% {
+    transform: translateX(1vw) translateY(30vh) scale(0.38);
+  }
+  5% {
+    transform: translateX(-14vw) translateY(17vh) scale(0.73);
+  }
+  10% {
+    transform: translateX(2vw) translateY(44vh) scale(0.31);
+  }
+  15% {
+    transform: translateX(-22vw) translateY(44vh) scale(0.84);
+  }
+  20% {
+    transform: translateX(-27vw) translateY(37vh) scale(0.7);
+  }
+  25% {
+    transform: translateX(-36vw) translateY(-33vh) scale(0.33);
+  }
+  30% {
+    transform: translateX(6vw) translateY(-23vh) scale(0.71);
+  }
+  35% {
+    transform: translateX(-1vw) translateY(0vh) scale(0.53);
+  }
+  40% {
+    transform: translateX(-36vw) translateY(34vh) scale(0.77);
+  }
+  45% {
+    transform: translateX(-36vw) translateY(-29vh) scale(0.34);
+  }
+  50% {
+    transform: translateX(28vw) translateY(11vh) scale(0.71);
+  }
+  55% {
+    transform: translateX(33vw) translateY(16vh) scale(0.6);
+  }
+  60% {
+    transform: translateX(45vw) translateY(-14vh) scale(0.37);
+  }
+  65% {
+    transform: translateX(-20vw) translateY(-8vh) scale(0.64);
+  }
+  70% {
+    transform: translateX(-3vw) translateY(14vh) scale(0.8);
+  }
+  75% {
+    transform: translateX(44vw) translateY(-26vh) scale(0.94);
+  }
+  80% {
+    transform: translateX(-4vw) translateY(-44vh) scale(0.44);
+  }
+  85% {
+    transform: translateX(-10vw) translateY(43vh) scale(0.46);
+  }
+  90% {
+    transform: translateX(11vw) translateY(-12vh) scale(0.66);
+  }
+  95% {
+    transform: translateX(23vw) translateY(-25vh) scale(1);
+  }
+  100% {
+    transform: translateX(24vw) translateY(39vh) scale(0.49);
+  }
+}
+.firefly:nth-child(5) {
+  animation-name: move5;
+}
+.firefly:nth-child(5)::before {
+  animation-duration: 17s;
+}
+.firefly:nth-child(5)::after {
+  animation-duration: 17s, 6108ms;
+  animation-delay: 0ms, 1230ms;
+}
+
+@keyframes move5 {
+  0% {
+    transform: translateX(-6vw) translateY(-46vh) scale(0.57);
+  }
+  5.2631578947% {
+    transform: translateX(-45vw) translateY(-33vh) scale(0.49);
+  }
+  10.5263157895% {
+    transform: translateX(4vw) translateY(-11vh) scale(0.72);
+  }
+  15.7894736842% {
+    transform: translateX(21vw) translateY(13vh) scale(0.29);
+  }
+  21.0526315789% {
+    transform: translateX(21vw) translateY(15vh) scale(0.68);
+  }
+  26.3157894737% {
+    transform: translateX(41vw) translateY(-27vh) scale(0.85);
+  }
+  31.5789473684% {
+    transform: translateX(-4vw) translateY(43vh) scale(0.53);
+  }
+  36.8421052632% {
+    transform: translateX(39vw) translateY(-20vh) scale(1);
+  }
+  42.1052631579% {
+    transform: translateX(-22vw) translateY(11vh) scale(0.93);
+  }
+  47.3684210526% {
+    transform: translateX(8vw) translateY(22vh) scale(0.36);
+  }
+  52.6315789474% {
+    transform: translateX(12vw) translateY(15vh) scale(1);
+  }
+  57.8947368421% {
+    transform: translateX(49vw) translateY(-47vh) scale(0.55);
+  }
+  63.1578947368% {
+    transform: translateX(-14vw) translateY(50vh) scale(0.44);
+  }
+  68.4210526316% {
+    transform: translateX(44vw) translateY(36vh) scale(0.67);
+  }
+  73.6842105263% {
+    transform: translateX(13vw) translateY(21vh) scale(0.46);
+  }
+  78.9473684211% {
+    transform: translateX(37vw) translateY(43vh) scale(0.85);
+  }
+  84.2105263158% {
+    transform: translateX(-3vw) translateY(-27vh) scale(0.91);
+  }
+  89.4736842105% {
+    transform: translateX(-38vw) translateY(-2vh) scale(0.44);
+  }
+  94.7368421053% {
+    transform: translateX(-46vw) translateY(-18vh) scale(0.87);
+  }
+  100% {
+    transform: translateX(-16vw) translateY(-36vh) scale(0.98);
+  }
+}
+.firefly:nth-child(6) {
+  animation-name: move6;
+}
+.firefly:nth-child(6)::before {
+  animation-duration: 14s;
+}
+.firefly:nth-child(6)::after {
+  animation-duration: 14s, 9122ms;
+  animation-delay: 0ms, 1247ms;
+}
+
+@keyframes move6 {
+  0% {
+    transform: translateX(-41vw) translateY(-19vh) scale(0.75);
+  }
+  5% {
+    transform: translateX(36vw) translateY(1vh) scale(0.57);
+  }
+  10% {
+    transform: translateX(-43vw) translateY(-42vh) scale(0.7);
+  }
+  15% {
+    transform: translateX(47vw) translateY(15vh) scale(0.79);
+  }
+  20% {
+    transform: translateX(36vw) translateY(-19vh) scale(0.58);
+  }
+  25% {
+    transform: translateX(-43vw) translateY(30vh) scale(0.88);
+  }
+  30% {
+    transform: translateX(-26vw) translateY(47vh) scale(0.81);
+  }
+  35% {
+    transform: translateX(-42vw) translateY(-30vh) scale(0.46);
+  }
+  40% {
+    transform: translateX(-31vw) translateY(28vh) scale(0.55);
+  }
+  45% {
+    transform: translateX(-27vw) translateY(6vh) scale(0.63);
+  }
+  50% {
+    transform: translateX(15vw) translateY(-22vh) scale(0.8);
+  }
+  55% {
+    transform: translateX(28vw) translateY(12vh) scale(0.98);
+  }
+  60% {
+    transform: translateX(48vw) translateY(17vh) scale(0.62);
+  }
+  65% {
+    transform: translateX(34vw) translateY(42vh) scale(0.75);
+  }
+  70% {
+    transform: translateX(18vw) translateY(-15vh) scale(0.66);
+  }
+  75% {
+    transform: translateX(-32vw) translateY(-35vh) scale(0.45);
+  }
+  80% {
+    transform: translateX(-43vw) translateY(-34vh) scale(0.34);
+  }
+  85% {
+    transform: translateX(-46vw) translateY(-19vh) scale(0.81);
+  }
+  90% {
+    transform: translateX(9vw) translateY(48vh) scale(0.71);
+  }
+  95% {
+    transform: translateX(-24vw) translateY(-45vh) scale(0.81);
+  }
+  100% {
+    transform: translateX(-41vw) translateY(-31vh) scale(0.42);
+  }
+}
+.firefly:nth-child(7) {
+  animation-name: move7;
+}
+.firefly:nth-child(7)::before {
+  animation-duration: 14s;
+}
+.firefly:nth-child(7)::after {
+  animation-duration: 14s, 10522ms;
+  animation-delay: 0ms, 3284ms;
+}
+
+@keyframes move7 {
+  0% {
+    transform: translateX(-44vw) translateY(49vh) scale(0.71);
+  }
+  4.1666666667% {
+    transform: translateX(-33vw) translateY(5vh) scale(0.54);
+  }
+  8.3333333333% {
+    transform: translateX(16vw) translateY(-28vh) scale(0.89);
+  }
+  12.5% {
+    transform: translateX(31vw) translateY(-18vh) scale(0.54);
+  }
+  16.6666666667% {
+    transform: translateX(34vw) translateY(44vh) scale(0.42);
+  }
+  20.8333333333% {
+    transform: translateX(-7vw) translateY(-21vh) scale(0.97);
+  }
+  25% {
+    transform: translateX(33vw) translateY(-31vh) scale(0.42);
+  }
+  29.1666666667% {
+    transform: translateX(-40vw) translateY(21vh) scale(0.46);
+  }
+  33.3333333333% {
+    transform: translateX(3vw) translateY(13vh) scale(0.61);
+  }
+  37.5% {
+    transform: translateX(-43vw) translateY(0vh) scale(0.4);
+  }
+  41.6666666667% {
+    transform: translateX(-7vw) translateY(-14vh) scale(0.82);
+  }
+  45.8333333333% {
+    transform: translateX(1vw) translateY(6vh) scale(0.77);
+  }
+  50% {
+    transform: translateX(-33vw) translateY(50vh) scale(0.76);
+  }
+  54.1666666667% {
+    transform: translateX(-17vw) translateY(41vh) scale(0.32);
+  }
+  58.3333333333% {
+    transform: translateX(-48vw) translateY(33vh) scale(1);
+  }
+  62.5% {
+    transform: translateX(19vw) translateY(28vh) scale(0.34);
+  }
+  66.6666666667% {
+    transform: translateX(13vw) translateY(40vh) scale(0.28);
+  }
+  70.8333333333% {
+    transform: translateX(44vw) translateY(23vh) scale(1);
+  }
+  75% {
+    transform: translateX(-4vw) translateY(-47vh) scale(0.94);
+  }
+  79.1666666667% {
+    transform: translateX(14vw) translateY(-33vh) scale(0.59);
+  }
+  83.3333333333% {
+    transform: translateX(19vw) translateY(-11vh) scale(0.31);
+  }
+  87.5% {
+    transform: translateX(-31vw) translateY(-30vh) scale(0.99);
+  }
+  91.6666666667% {
+    transform: translateX(-24vw) translateY(14vh) scale(0.34);
+  }
+  95.8333333333% {
+    transform: translateX(-22vw) translateY(-24vh) scale(0.87);
+  }
+  100% {
+    transform: translateX(-10vw) translateY(18vh) scale(0.53);
+  }
+}
+.firefly:nth-child(8) {
+  animation-name: move8;
+}
+.firefly:nth-child(8)::before {
+  animation-duration: 15s;
+}
+.firefly:nth-child(8)::after {
+  animation-duration: 15s, 10224ms;
+  animation-delay: 0ms, 4625ms;
+}
+
+@keyframes move8 {
+  0% {
+    transform: translateX(21vw) translateY(36vh) scale(0.89);
+  }
+  5.2631578947% {
+    transform: translateX(49vw) translateY(8vh) scale(0.36);
+  }
+  10.5263157895% {
+    transform: translateX(-24vw) translateY(-5vh) scale(0.94);
+  }
+  15.7894736842% {
+    transform: translateX(-42vw) translateY(-3vh) scale(0.95);
+  }
+  21.0526315789% {
+    transform: translateX(35vw) translateY(2vh) scale(0.34);
+  }
+  26.3157894737% {
+    transform: translateX(-46vw) translateY(48vh) scale(0.54);
+  }
+  31.5789473684% {
+    transform: translateX(14vw) translateY(-17vh) scale(0.8);
+  }
+  36.8421052632% {
+    transform: translateX(33vw) translateY(19vh) scale(0.73);
+  }
+  42.1052631579% {
+    transform: translateX(-40vw) translateY(-31vh) scale(0.78);
+  }
+  47.3684210526% {
+    transform: translateX(-2vw) translateY(2vh) scale(0.34);
+  }
+  52.6315789474% {
+    transform: translateX(-47vw) translateY(-6vh) scale(0.48);
+  }
+  57.8947368421% {
+    transform: translateX(17vw) translateY(12vh) scale(0.45);
+  }
+  63.1578947368% {
+    transform: translateX(13vw) translateY(-13vh) scale(0.83);
+  }
+  68.4210526316% {
+    transform: translateX(8vw) translateY(32vh) scale(0.26);
+  }
+  73.6842105263% {
+    transform: translateX(-29vw) translateY(18vh) scale(0.95);
+  }
+  78.9473684211% {
+    transform: translateX(-3vw) translateY(-5vh) scale(0.8);
+  }
+  84.2105263158% {
+    transform: translateX(-18vw) translateY(-43vh) scale(0.95);
+  }
+  89.4736842105% {
+    transform: translateX(3vw) translateY(-37vh) scale(0.78);
+  }
+  94.7368421053% {
+    transform: translateX(-8vw) translateY(-22vh) scale(0.59);
+  }
+  100% {
+    transform: translateX(44vw) translateY(-2vh) scale(0.73);
+  }
+}
+.firefly:nth-child(9) {
+  animation-name: move9;
+}
+.firefly:nth-child(9)::before {
+  animation-duration: 14s;
+}
+.firefly:nth-child(9)::after {
+  animation-duration: 14s, 10887ms;
+  animation-delay: 0ms, 2709ms;
+}
+
+@keyframes move9 {
+  0% {
+    transform: translateX(27vw) translateY(6vh) scale(0.36);
+  }
+  5.2631578947% {
+    transform: translateX(-10vw) translateY(29vh) scale(0.42);
+  }
+  10.5263157895% {
+    transform: translateX(-33vw) translateY(34vh) scale(0.29);
+  }
+  15.7894736842% {
+    transform: translateX(9vw) translateY(-17vh) scale(0.76);
+  }
+  21.0526315789% {
+    transform: translateX(-34vw) translateY(-8vh) scale(0.36);
+  }
+  26.3157894737% {
+    transform: translateX(11vw) translateY(1vh) scale(0.67);
+  }
+  31.5789473684% {
+    transform: translateX(30vw) translateY(24vh) scale(0.94);
+  }
+  36.8421052632% {
+    transform: translateX(39vw) translateY(9vh) scale(0.54);
+  }
+  42.1052631579% {
+    transform: translateX(-37vw) translateY(-45vh) scale(0.86);
+  }
+  47.3684210526% {
+    transform: translateX(-37vw) translateY(-11vh) scale(0.91);
+  }
+  52.6315789474% {
+    transform: translateX(-46vw) translateY(29vh) scale(0.94);
+  }
+  57.8947368421% {
+    transform: translateX(-13vw) translateY(-37vh) scale(0.78);
+  }
+  63.1578947368% {
+    transform: translateX(4vw) translateY(-27vh) scale(0.68);
+  }
+  68.4210526316% {
+    transform: translateX(-32vw) translateY(5vh) scale(0.59);
+  }
+  73.6842105263% {
+    transform: translateX(-18vw) translateY(10vh) scale(0.71);
+  }
+  78.9473684211% {
+    transform: translateX(-46vw) translateY(45vh) scale(0.52);
+  }
+  84.2105263158% {
+    transform: translateX(-35vw) translateY(-3vh) scale(0.75);
+  }
+  89.4736842105% {
+    transform: translateX(41vw) translateY(27vh) scale(0.38);
+  }
+  94.7368421053% {
+    transform: translateX(37vw) translateY(-9vh) scale(0.88);
+  }
+  100% {
+    transform: translateX(44vw) translateY(48vh) scale(0.5);
+  }
+}
+.firefly:nth-child(10) {
+  animation-name: move10;
+}
+.firefly:nth-child(10)::before {
+  animation-duration: 12s;
+}
+.firefly:nth-child(10)::after {
+  animation-duration: 12s, 9999ms;
+  animation-delay: 0ms, 8129ms;
+}
+
+@keyframes move10 {
+  0% {
+    transform: translateX(-1vw) translateY(25vh) scale(0.7);
+  }
+  4.7619047619% {
+    transform: translateX(-13vw) translateY(49vh) scale(0.81);
+  }
+  9.5238095238% {
+    transform: translateX(27vw) translateY(-30vh) scale(0.91);
+  }
+  14.2857142857% {
+    transform: translateX(-48vw) translateY(-46vh) scale(0.82);
+  }
+  19.0476190476% {
+    transform: translateX(4vw) translateY(47vh) scale(0.55);
+  }
+  23.8095238095% {
+    transform: translateX(15vw) translateY(3vh) scale(0.59);
+  }
+  28.5714285714% {
+    transform: translateX(-44vw) translateY(42vh) scale(0.32);
+  }
+  33.3333333333% {
+    transform: translateX(45vw) translateY(9vh) scale(0.31);
+  }
+  38.0952380952% {
+    transform: translateX(-40vw) translateY(-10vh) scale(0.75);
+  }
+  42.8571428571% {
+    transform: translateX(-47vw) translateY(-21vh) scale(0.78);
+  }
+  47.619047619% {
+    transform: translateX(-24vw) translateY(44vh) scale(0.68);
+  }
+  52.380952381% {
+    transform: translateX(14vw) translateY(-38vh) scale(0.96);
+  }
+  57.1428571429% {
+    transform: translateX(-17vw) translateY(16vh) scale(0.91);
+  }
+  61.9047619048% {
+    transform: translateX(13vw) translateY(-46vh) scale(0.56);
+  }
+  66.6666666667% {
+    transform: translateX(-6vw) translateY(-28vh) scale(0.67);
+  }
+  71.4285714286% {
+    transform: translateX(10vw) translateY(-7vh) scale(0.88);
+  }
+  76.1904761905% {
+    transform: translateX(-29vw) translateY(1vh) scale(0.27);
+  }
+  80.9523809524% {
+    transform: translateX(-17vw) translateY(36vh) scale(0.53);
+  }
+  85.7142857143% {
+    transform: translateX(-25vw) translateY(-27vh) scale(0.94);
+  }
+  90.4761904762% {
+    transform: translateX(33vw) translateY(37vh) scale(0.49);
+  }
+  95.2380952381% {
+    transform: translateX(-17vw) translateY(8vh) scale(0.77);
+  }
+  100% {
+    transform: translateX(2vw) translateY(-1vh) scale(0.73);
+  }
+}
+.firefly:nth-child(11) {
+  animation-name: move11;
+}
+.firefly:nth-child(11)::before {
+  animation-duration: 13s;
+}
+.firefly:nth-child(11)::after {
+  animation-duration: 13s, 7541ms;
+  animation-delay: 0ms, 3124ms;
+}
+
+@keyframes move11 {
+  0% {
+    transform: translateX(45vw) translateY(-27vh) scale(0.5);
+  }
+  5.2631578947% {
+    transform: translateX(46vw) translateY(41vh) scale(0.57);
+  }
+  10.5263157895% {
+    transform: translateX(-11vw) translateY(-3vh) scale(0.35);
+  }
+  15.7894736842% {
+    transform: translateX(46vw) translateY(-17vh) scale(1);
+  }
+  21.0526315789% {
+    transform: translateX(48vw) translateY(-36vh) scale(0.26);
+  }
+  26.3157894737% {
+    transform: translateX(-2vw) translateY(37vh) scale(0.77);
+  }
+  31.5789473684% {
+    transform: translateX(-28vw) translateY(-38vh) scale(0.8);
+  }
+  36.8421052632% {
+    transform: translateX(-1vw) translateY(41vh) scale(0.89);
+  }
+  42.1052631579% {
+    transform: translateX(-9vw) translateY(9vh) scale(0.38);
+  }
+  47.3684210526% {
+    transform: translateX(-38vw) translateY(36vh) scale(0.3);
+  }
+  52.6315789474% {
+    transform: translateX(30vw) translateY(-47vh) scale(0.31);
+  }
+  57.8947368421% {
+    transform: translateX(31vw) translateY(-35vh) scale(0.48);
+  }
+  63.1578947368% {
+    transform: translateX(44vw) translateY(-1vh) scale(0.68);
+  }
+  68.4210526316% {
+    transform: translateX(-33vw) translateY(35vh) scale(0.76);
+  }
+  73.6842105263% {
+    transform: translateX(-27vw) translateY(24vh) scale(0.91);
+  }
+  78.9473684211% {
+    transform: translateX(43vw) translateY(9vh) scale(0.65);
+  }
+  84.2105263158% {
+    transform: translateX(37vw) translateY(-22vh) scale(0.6);
+  }
+  89.4736842105% {
+    transform: translateX(20vw) translateY(5vh) scale(0.29);
+  }
+  94.7368421053% {
+    transform: translateX(-33vw) translateY(-35vh) scale(0.69);
+  }
+  100% {
+    transform: translateX(0vw) translateY(42vh) scale(0.32);
+  }
+}
+.firefly:nth-child(12) {
+  animation-name: move12;
+}
+.firefly:nth-child(12)::before {
+  animation-duration: 14s;
+}
+.firefly:nth-child(12)::after {
+  animation-duration: 14s, 7973ms;
+  animation-delay: 0ms, 1474ms;
+}
+
+@keyframes move12 {
+  0% {
+    transform: translateX(29vw) translateY(-3vh) scale(0.83);
+  }
+  4.1666666667% {
+    transform: translateX(23vw) translateY(26vh) scale(0.55);
+  }
+  8.3333333333% {
+    transform: translateX(-16vw) translateY(-38vh) scale(0.82);
+  }
+  12.5% {
+    transform: translateX(-14vw) translateY(10vh) scale(0.64);
+  }
+  16.6666666667% {
+    transform: translateX(48vw) translateY(-37vh) scale(0.28);
+  }
+  20.8333333333% {
+    transform: translateX(14vw) translateY(-40vh) scale(0.38);
+  }
+  25% {
+    transform: translateX(10vw) translateY(-38vh) scale(0.49);
+  }
+  29.1666666667% {
+    transform: translateX(5vw) translateY(25vh) scale(0.59);
+  }
+  33.3333333333% {
+    transform: translateX(49vw) translateY(44vh) scale(0.64);
+  }
+  37.5% {
+    transform: translateX(-10vw) translateY(15vh) scale(0.83);
+  }
+  41.6666666667% {
+    transform: translateX(-19vw) translateY(-3vh) scale(0.53);
+  }
+  45.8333333333% {
+    transform: translateX(31vw) translateY(6vh) scale(0.85);
+  }
+  50% {
+    transform: translateX(-10vw) translateY(42vh) scale(0.7);
+  }
+  54.1666666667% {
+    transform: translateX(16vw) translateY(35vh) scale(0.81);
+  }
+  58.3333333333% {
+    transform: translateX(-41vw) translateY(34vh) scale(0.77);
+  }
+  62.5% {
+    transform: translateX(-36vw) translateY(-40vh) scale(0.32);
+  }
+  66.6666666667% {
+    transform: translateX(-9vw) translateY(8vh) scale(0.42);
+  }
+  70.8333333333% {
+    transform: translateX(40vw) translateY(-39vh) scale(0.76);
+  }
+  75% {
+    transform: translateX(-39vw) translateY(-2vh) scale(0.89);
+  }
+  79.1666666667% {
+    transform: translateX(1vw) translateY(12vh) scale(0.77);
+  }
+  83.3333333333% {
+    transform: translateX(-10vw) translateY(45vh) scale(0.58);
+  }
+  87.5% {
+    transform: translateX(-42vw) translateY(-17vh) scale(0.39);
+  }
+  91.6666666667% {
+    transform: translateX(-39vw) translateY(49vh) scale(0.94);
+  }
+  95.8333333333% {
+    transform: translateX(-5vw) translateY(-25vh) scale(0.79);
+  }
+  100% {
+    transform: translateX(16vw) translateY(46vh) scale(0.72);
+  }
+}
+.firefly:nth-child(13) {
+  animation-name: move13;
+}
+.firefly:nth-child(13)::before {
+  animation-duration: 15s;
+}
+.firefly:nth-child(13)::after {
+  animation-duration: 15s, 10025ms;
+  animation-delay: 0ms, 8420ms;
+}
+
+@keyframes move13 {
+  0% {
+    transform: translateX(31vw) translateY(-31vh) scale(0.92);
+  }
+  5.8823529412% {
+    transform: translateX(17vw) translateY(19vh) scale(0.49);
+  }
+  11.7647058824% {
+    transform: translateX(2vw) translateY(46vh) scale(0.87);
+  }
+  17.6470588235% {
+    transform: translateX(-4vw) translateY(-16vh) scale(0.95);
+  }
+  23.5294117647% {
+    transform: translateX(12vw) translateY(6vh) scale(0.35);
+  }
+  29.4117647059% {
+    transform: translateX(30vw) translateY(-23vh) scale(1);
+  }
+  35.2941176471% {
+    transform: translateX(-6vw) translateY(39vh) scale(0.44);
+  }
+  41.1764705882% {
+    transform: translateX(-32vw) translateY(-44vh) scale(0.61);
+  }
+  47.0588235294% {
+    transform: translateX(-16vw) translateY(38vh) scale(0.92);
+  }
+  52.9411764706% {
+    transform: translateX(33vw) translateY(49vh) scale(0.95);
+  }
+  58.8235294118% {
+    transform: translateX(30vw) translateY(49vh) scale(0.71);
+  }
+  64.7058823529% {
+    transform: translateX(43vw) translateY(0vh) scale(0.31);
+  }
+  70.5882352941% {
+    transform: translateX(19vw) translateY(9vh) scale(0.49);
+  }
+  76.4705882353% {
+    transform: translateX(-11vw) translateY(17vh) scale(0.74);
+  }
+  82.3529411765% {
+    transform: translateX(-23vw) translateY(-3vh) scale(0.37);
+  }
+  88.2352941176% {
+    transform: translateX(42vw) translateY(34vh) scale(0.37);
+  }
+  94.1176470588% {
+    transform: translateX(-32vw) translateY(17vh) scale(0.78);
+  }
+  100% {
+    transform: translateX(-43vw) translateY(-34vh) scale(0.69);
+  }
+}
+.firefly:nth-child(14) {
+  animation-name: move14;
+}
+.firefly:nth-child(14)::before {
+  animation-duration: 13s;
+}
+.firefly:nth-child(14)::after {
+  animation-duration: 13s, 9435ms;
+  animation-delay: 0ms, 7253ms;
+}
+
+@keyframes move14 {
+  0% {
+    transform: translateX(-42vw) translateY(48vh) scale(0.31);
+  }
+  5.2631578947% {
+    transform: translateX(41vw) translateY(46vh) scale(0.96);
+  }
+  10.5263157895% {
+    transform: translateX(-4vw) translateY(-22vh) scale(0.79);
+  }
+  15.7894736842% {
+    transform: translateX(6vw) translateY(47vh) scale(0.57);
+  }
+  21.0526315789% {
+    transform: translateX(-41vw) translateY(25vh) scale(0.78);
+  }
+  26.3157894737% {
+    transform: translateX(12vw) translateY(48vh) scale(0.46);
+  }
+  31.5789473684% {
+    transform: translateX(16vw) translateY(-47vh) scale(1);
+  }
+  36.8421052632% {
+    transform: translateX(-16vw) translateY(-11vh) scale(0.55);
+  }
+  42.1052631579% {
+    transform: translateX(47vw) translateY(-17vh) scale(0.79);
+  }
+  47.3684210526% {
+    transform: translateX(-25vw) translateY(26vh) scale(0.29);
+  }
+  52.6315789474% {
+    transform: translateX(-6vw) translateY(-29vh) scale(0.99);
+  }
+  57.8947368421% {
+    transform: translateX(3vw) translateY(23vh) scale(0.82);
+  }
+  63.1578947368% {
+    transform: translateX(22vw) translateY(11vh) scale(0.81);
+  }
+  68.4210526316% {
+    transform: translateX(7vw) translateY(-7vh) scale(0.77);
+  }
+  73.6842105263% {
+    transform: translateX(3vw) translateY(4vh) scale(0.72);
+  }
+  78.9473684211% {
+    transform: translateX(-6vw) translateY(-45vh) scale(0.37);
+  }
+  84.2105263158% {
+    transform: translateX(-15vw) translateY(41vh) scale(0.73);
+  }
+  89.4736842105% {
+    transform: translateX(19vw) translateY(11vh) scale(0.33);
+  }
+  94.7368421053% {
+    transform: translateX(43vw) translateY(8vh) scale(0.84);
+  }
+  100% {
+    transform: translateX(-23vw) translateY(-38vh) scale(0.33);
+  }
+}
+.firefly:nth-child(15) {
+  animation-name: move15;
+}
+.firefly:nth-child(15)::before {
+  animation-duration: 15s;
+}
+.firefly:nth-child(15)::after {
+  animation-duration: 15s, 5578ms;
+  animation-delay: 0ms, 4195ms;
+}
+
+@keyframes move15 {
+  0% {
+    transform: translateX(-29vw) translateY(16vh) scale(0.41);
+  }
+  3.5714285714% {
+    transform: translateX(-32vw) translateY(11vh) scale(0.38);
+  }
+  7.1428571429% {
+    transform: translateX(33vw) translateY(23vh) scale(0.29);
+  }
+  10.7142857143% {
+    transform: translateX(-34vw) translateY(-45vh) scale(0.81);
+  }
+  14.2857142857% {
+    transform: translateX(-38vw) translateY(-45vh) scale(0.52);
+  }
+  17.8571428571% {
+    transform: translateX(45vw) translateY(-22vh) scale(0.87);
+  }
+  21.4285714286% {
+    transform: translateX(27vw) translateY(17vh) scale(0.59);
+  }
+  25% {
+    transform: translateX(-20vw) translateY(-31vh) scale(1);
+  }
+  28.5714285714% {
+    transform: translateX(45vw) translateY(31vh) scale(0.3);
+  }
+  32.1428571429% {
+    transform: translateX(8vw) translateY(46vh) scale(0.68);
+  }
+  35.7142857143% {
+    transform: translateX(-5vw) translateY(19vh) scale(0.87);
+  }
+  39.2857142857% {
+    transform: translateX(13vw) translateY(6vh) scale(1);
+  }
+  42.8571428571% {
+    transform: translateX(7vw) translateY(15vh) scale(0.35);
+  }
+  46.4285714286% {
+    transform: translateX(-5vw) translateY(-32vh) scale(0.49);
+  }
+  50% {
+    transform: translateX(-46vw) translateY(-8vh) scale(0.37);
+  }
+  53.5714285714% {
+    transform: translateX(48vw) translateY(32vh) scale(0.95);
+  }
+  57.1428571429% {
+    transform: translateX(-45vw) translateY(33vh) scale(0.27);
+  }
+  60.7142857143% {
+    transform: translateX(-17vw) translateY(31vh) scale(0.56);
+  }
+  64.2857142857% {
+    transform: translateX(-6vw) translateY(40vh) scale(0.49);
+  }
+  67.8571428571% {
+    transform: translateX(23vw) translateY(41vh) scale(0.59);
+  }
+  71.4285714286% {
+    transform: translateX(-34vw) translateY(-2vh) scale(0.29);
+  }
+  75% {
+    transform: translateX(-40vw) translateY(-30vh) scale(0.49);
+  }
+  78.5714285714% {
+    transform: translateX(-30vw) translateY(36vh) scale(0.67);
+  }
+  82.1428571429% {
+    transform: translateX(49vw) translateY(38vh) scale(0.81);
+  }
+  85.7142857143% {
+    transform: translateX(47vw) translateY(14vh) scale(0.48);
+  }
+  89.2857142857% {
+    transform: translateX(-35vw) translateY(24vh) scale(0.57);
+  }
+  92.8571428571% {
+    transform: translateX(-3vw) translateY(-4vh) scale(0.81);
+  }
+  96.4285714286% {
+    transform: translateX(-36vw) translateY(14vh) scale(0.32);
+  }
+  100% {
+    transform: translateX(29vw) translateY(-3vh) scale(1);
+  }
+}
+@keyframes drift {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes flash {
+  0%, 30%, 100% {
+    opacity: 0;
+    box-shadow: 0 0 0vw 0vw yellow;
+  }
+  5% {
+    opacity: 1;
+    box-shadow: 0 0 2vw 0.4vw yellow;
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <!-- Quantity should be the same in Sass-->
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+  
+      <script id="rendered-js" >
+// ¯\_(ツ)_/¯
+//# sourceURL=pen.js
+    </script>
+
+<div id="readme" class="Box-body readme blob js-code-block-container p-5 p-xl-6 gist-border-0">
+    <article class="markdown-body entry-content container-lg" itemprop="text">   <div align="center">
+<h3><a id="user-content-ravana-bot--by-sl_ravana_teame" class="anchor" aria-hidden="true" href="#ravana-bot--by-sl_ravana_teame"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>RAVANA BOT <g-emoji class="g-emoji" alias="prince" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f934.png">🤴</g-emoji><g-emoji class="g-emoji" alias="yo_yo" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1fa80.png">🪀</g-emoji> By SL_RAVANA_TEAME</h3>
+<p><a href="https://github.com/RAVANA-SL/slRavana"><img src="https://readme-typing-svg.herokuapp.com/?font=Courier&color=F7F7F7FF&width=610&height=60&lines=Welcome+To+slRavana-Bot,+%F0%9F%91%8B%F0%9F%A4%A9;%F0%9F%AA%80+slRavana_Bot+is+a+Helper+WhatsApp+Bot+Written;By+@SL_RAVANA_TEAME+with+Baileys.+RaOne;has+a+lot+of+Features/Commans+Including+Logo;Maker+%26+Meadia+Downloader.;Tnx+For+Visiting+RAVANA-BOT+%F0%9F%A4%B4%F0%9F%92%97" style="max-width: 100%;"></a></p>
+ </div>
+<div align="center">
+  <a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/f6f449220c71b6ddb10c84dfd36272e3454a096652bdfc504da9014c908c939f/68747470733a2f2f74656c656772612e70682f66696c652f6362616136656161613232613533336235343139342e6a7067"><img src="https://camo.githubusercontent.com/f6f449220c71b6ddb10c84dfd36272e3454a096652bdfc504da9014c908c939f/68747470733a2f2f74656c656772612e70682f66696c652f6362616136656161613232613533336235343139342e6a7067" width="600" height="600" data-canonical-src="https://telegra.ph/file/cbaa6eaaa22a533b54194.jpg" style="max-width: 100%;"></a>
+<div class="snippet-clipboard-content position-relative" data-snippet-clipboard-copy-content="   | © | Reserved |
+"><pre><code>   | © | Reserved |
+</code></pre></div>
+<p><b>A stable pluggable whatsapp userbot + , based on whatsAsena.</b></p>
+<p><a href="https://github.com/RAVANA-SL/slRavana/stargazers"><img src="https://camo.githubusercontent.com/29a1aabb65c05b5e09372276257651c7f12383c937ab336e132207ed53fd93b3/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f524156414e412d534c2f736c526176616e613f7374796c653d666c61742d73717561726526636f6c6f723d79656c6c6f77" alt="Stars" data-canonical-src="https://img.shields.io/github/stars/RAVANA-SL/slRavana?style=flat-square&amp;color=yellow" style="max-width: 100%;"></a>
+<a href="https://github.com/RAVANA-SL/slRavana/fork"><img src="https://camo.githubusercontent.com/ce984a4e6f84f26490d2386acc3cf574db4a67b05259d8c55ab036bf6ec4f839/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f666f726b732f524156414e412d534c2f736c526176616e613f7374796c653d666c61742d73717561726526636f6c6f723d6f72616e6765" alt="Forks" data-canonical-src="https://img.shields.io/github/forks/RAVANA-SL/slRavana?style=flat-square&amp;color=orange" style="max-width: 100%;"></a>
+<a href="https://github.com/RAVANA-SL/slRavana/"><img src="https://camo.githubusercontent.com/d56a225a16a083303e76bffb0e5780a0dfa93fffe8afd5d7b66819cfa93c8d30/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f7265706f2d73697a652f524156414e412d534c2f736c526176616e613f7374796c653d666c61742d73717561726526636f6c6f723d677265656e" alt="Size" data-canonical-src="https://img.shields.io/github/repo-size/RAVANA-SL/slRavana?style=flat-square&amp;color=green" style="max-width: 100%;"></a><br>
+<a href="https://nodejs.org/" rel="nofollow"><img src="https://camo.githubusercontent.com/ab5bf464cb2a2d4a1d8fcdc9c5f7da6972cf9094c41adffa4d830ecef40e29c3/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6e6f64652d6a732d677265656e" alt="Python" data-canonical-src="https://img.shields.io/badge/node-js-green" style="max-width: 100%;"></a>
+<a href="https://github.com/RAVANA-SL/slRavana/graphs/commit-activity"><img src="https://camo.githubusercontent.com/6e4da91cb02711349e6b9d0aba6a767362818c1d17891a02f06fded4415f6172/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d61696e7461696e65642533462d7965732d677265656e2e737667" alt="Maintenance" data-canonical-src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" style="max-width: 100%;"></a>
+<a href="https://github.com/RAVANA-SL/slRavana"><img src="https://camo.githubusercontent.com/709f3cbabb06b8896edf6890835a638693bb9f70e6002a959e189190d55d6111/68747470733a2f2f6261646765732e66726170736f66742e636f6d2f6f732f76322f6f70656e2d736f757263652e7376673f763d313033" alt="Open Source Love svg2" data-canonical-src="https://badges.frapsoft.com/os/v2/open-source.svg?v=103" style="max-width: 100%;"></a><br>
+<a href="https://github.com/RAVANA-SL/slRavana/graphs/contributors"><img src="https://camo.githubusercontent.com/4d7aac68608387e882079c94b171d35e9b6a9a711b20ec115d63b480e5588503/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f636f6e7472696275746f72732f524156414e412d534c2f736c526176616e613f7374796c653d666c61742d73717561726526636f6c6f723d677265656e" alt="Contributors" data-canonical-src="https://img.shields.io/github/contributors/RAVANA-SL/slRavana?style=flat-square&amp;color=green" style="max-width: 100%;"></a>
+<a href="https://makeapullrequest.com" rel="nofollow"><img src="https://camo.githubusercontent.com/0ff11ed110cfa69f703ef0dcca3cee6141c0a8ef465e8237221ae245de3deb3d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5052732d77656c636f6d652d627269676874677265656e2e7376673f7374796c653d666c61742d737175617265" alt="PRs Welcome" data-canonical-src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" style="max-width: 100%;"></a>
+<a href="https://github.com/RAVANA-SL/slRavana/blob/main/LICENSE"><img src="https://camo.githubusercontent.com/87543d43820aac89beca0b272af4991876a83482b0d18d8bb50c86169d691e27/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4147504c2d626c7565" alt="License" data-canonical-src="https://img.shields.io/badge/License-AGPL-blue" style="max-width: 100%;"></a></p>
+<h3><a id="user-content-️-warning" class="anchor" aria-hidden="true" href="#️-warning"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a><g-emoji class="g-emoji" alias="warning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png">⚠️</g-emoji> Warning!</h3>
+<div class="snippet-clipboard-content position-relative" data-snippet-clipboard-copy-content="Due to Userbot; Your WhatsApp account may be banned.
+This is an open source project, you are responsible for everything you do. 
+Absolutely, Asena executives do not accept responsibility.
+By establishing the Asena, you are deemed to have accepted these responsibilities.
+"><pre><code>Userbot නිසා; ඔබේ WhatsApp ගිණුම තහනම් කළ හැකිය.ඒ කියන්නේ ඔබ අනවශ්‍ය ලෙස බෑන්,ස්පෑම් කමාන්ඩ් ගැහුවොත්
+    මෙය විවෘත මූලාශ්‍ර ව්‍යාපෘතියකි, ඔබ කරන සෑම දෙයකටම ඔබ වගකිව යුතුය.
+    නිසැකවම, RAVANA TEAM වගකීම භාර නොගනී.
+    RAVANA පිහිටුවීමෙන් ඔබ මෙම වගකීම් බාර ගත් බව සැලකේ.
+</code></pre></div>
+<h2><a id="user-content--guide" class="anchor" aria-hidden="true" href="#-guide"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a><g-emoji class="g-emoji" alias="loudspeaker" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png">📢</g-emoji> Guide</h2>
+<p>Click Whatsapp logo to Join Support Group <g-emoji class="g-emoji" alias="prince" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f934.png">🤴</g-emoji><g-emoji class="g-emoji" alias="point_down" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f447.png">👇</g-emoji>
+<br>
+<a href="https://chat.whatsapp.com/BZxwFPt5pUe19Y4EW9DjDP"><img src="https://telegra.ph/file/88b996473fc4c82dd0810.png " alt="" width="450px"></a>
+<br>
+<div class="makebot">
+    <iframe width="790" height="444" src="https://www.youtube.com/embed/vGHpome5e3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h3><a id="user-content-simple-method" class="anchor" aria-hidden="true" href="#simple-method"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Simple Method</h3>
+<p><a href="https://replit.com/@RAVANASL/RAVANA-Qr" rel="nofollow"><img src="https://camo.githubusercontent.com/a0501e02ba1e2495e5dc6a3984cd80d4d8c1114a54b462994471a4b51f3767d6/68747470733a2f2f7265706c2e69742f62616467652f6769746875622f71756965632f524156414e41" alt="Run on Repl.it" data-canonical-src="https://repl.it/badge/github/quiec/RAVANA" style="width: 20%;"></a></p>
+<p><a href="https://heroku.com/deploy?template=https://github.com/RAVANA-SL/slRavana" rel="nofollow"><img src="https://camo.githubusercontent.com/6979881d5a96b7b18a057083bb8aeb87ba35fc279452e29034c1e1c49ade0636/68747470733a2f2f7777772e6865726f6b7563646e2e636f6d2f6465706c6f792f627574746f6e2e737667" alt="Deploy" data-canonical-src="https://www.herokucdn.com/deploy/button.svg" style="width: 25%;"></a>
+</p>
+</div>
+<div class="content">
+    <div class="inner">
+        <h3>RAVANA කණ්ඩායම</h3>
+        <div class="table-wrapper">
+            <table>
+                <tbody class="ss">
+                    <tr>
+                        <td><a href="httsp://github.com/RAVANA-SL/"><img src="https://telegra.ph/file/221e439cab8b50aa27a5f.jpg" width="200" height="200" alt="Hacker RAVANA"></a></td>
+                        <td><a href="https://github.com/MrChaby"><img src="https://github.com/MrChaby.png?size=100" width="200" height="200" alt="Buddy-X"></a></td>
+                        <td><a href="https://github.com/Agentrox8520"><img src="https://telegra.ph/file/367c41888df0eafc682c6.jpg" width="200" height="200" alt="Hacker MARAYA"></a></td>
+                    </tr>
+                    <tr>
+                        <center><td><a href="https://github.com/RAVANA-Sl"><h4 class="ss">HACKER RAVANA</h4></a>[caption]</td></center>
+                        <center><td><a href="https://github.com/MrChaby"><h4 class="ss">Buddy-X</h4></a>[Caption]</td></center>
+                    <center><td><a href="https://github.com/Agentrox8520"><h4 class="ss">HACKER MARAYA</h4></a>[Vice caption]</td></center>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+    </div>
+
+</body>
+
+</html>
